@@ -1,17 +1,23 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-const plugins = [react()]
-try {
-  const mod = await import('@cloudflare/vite-plugin')
-  if (mod && typeof mod.cloudflare === 'function') {
-    plugins.push(mod.cloudflare())
+// Function to safely add Cloudflare plugin
+function getPlugins() {
+  const plugins = [react()]
+
+  try {
+    const mod = require('@cloudflare/vite-plugin') // use require instead of await
+    if (mod && typeof mod.cloudflare === 'function') {
+      plugins.push(mod.cloudflare())
+    }
+  } catch (err) {
+    // Cloudflare plugin not installed, continue without it
   }
-} catch (err) {
-  // Cloudflare plugin not available in this environment; continue without it
+
+  return plugins
 }
 
 export default defineConfig({
-  plugins: [react()],
-  base: 'https://sunhakportfolio.me/' 
+  plugins: getPlugins(),
+  base: 'https://sunhakportfolio.me/'
 })
