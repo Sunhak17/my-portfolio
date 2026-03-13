@@ -14,9 +14,6 @@ try {
 export default defineConfig({
   plugins,
   build: {
-    outDir: 'dist',
-    rollupOptions: {
-      input: 'index.html'
-    }
+    outDir: 'dist'
   }
 })
