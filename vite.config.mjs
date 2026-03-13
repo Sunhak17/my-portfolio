@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-const plugins = []
+const plugins = [react()]
 try {
   const mod = await import('@cloudflare/vite-plugin')
   if (mod && typeof mod.cloudflare === 'function') {
@@ -11,5 +12,11 @@ try {
 }
 
 export default defineConfig({
-  plugins
+  plugins,
+  build: {
+    outDir: 'dist',
+    rollupOptions: {
+      input: 'index.html'
+    }
+  }
 })
