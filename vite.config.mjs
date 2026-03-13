@@ -11,5 +11,6 @@ try {
 }
 
 export default defineConfig({
-  plugins
+  plugins: [react()],
+  base: 'https://sunhakportfolio.me/'
 })
