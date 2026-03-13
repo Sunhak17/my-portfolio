@@ -1,0 +1,123 @@
+.projects-page{
+  padding:60px 0;
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+  gap:32px;
+  margin-top:40px;
+}
+
+.project-card{
+  background:var(--card);
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid var(--panel);
+  transition:all 0.3s ease;
+}
+
+.project-card:hover{
+  border-color:var(--accent);
+  transform:translateY(-8px);
+  box-shadow:0 8px 24px rgba(21,151,187,0.2);
+}
+
+.project-image{
+  width:100%;
+  height:200px;
+  background:var(--panel);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.project-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.project-image-placeholder{
+  font-size:48px;
+  color:var(--accent);
+}
+
+.project-content{
+  padding:24px;
+}
+
+.project-title{
+  font-size:24px;
+  margin-bottom:12px;
+  color:var(--text);
+}
+
+.project-problem{
+  font-size:14px;
+  color:var(--text-secondary);
+  margin-bottom:16px;
+  line-height:1.6;
+}
+
+.project-tech{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:20px;
+}
+
+.tech-tag{
+  background:var(--panel);
+  color:var(--accent);
+  padding:4px 12px;
+  border-radius:4px;
+  font-size:12px;
+  border:1px solid var(--accent);
+}
+
+.project-links{
+  display:flex;
+  gap:12px;
+}
+
+.project-link{
+  padding:8px 16px;
+  border-radius:6px;
+  font-size:14px;
+  font-weight:600;
+  transition:all 0.3s ease;
+  display:inline-block;
+  cursor:pointer;
+}
+
+.github-link{
+  background:var(--panel);
+  color:var(--text);
+  border:1px solid var(--text-secondary);
+}
+
+.github-link:hover{
+  background:var(--text);
+  color:var(--bg);
+}
+
+.live-link{
+  background:var(--accent);
+  color:#fff;
+}
+
+.live-link:hover{
+  background:var(--accent-hover);
+}
+
+@media(max-width:768px){
+  .projects-page{
+    padding:40px 0;
+  }
+  .projects-grid{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+}
