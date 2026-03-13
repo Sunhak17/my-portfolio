@@ -14,6 +14,7 @@ try {
 export default defineConfig({
   plugins,
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    emptyOutDir: true // Force clean build each time
   }
 })
