@@ -1,6 +1,15 @@
 import { defineConfig } from 'vite'
-import { cloudflare } from '@cloudflare/vite-plugin'
+
+const plugins = []
+try {
+  const mod = await import('@cloudflare/vite-plugin')
+  if (mod && typeof mod.cloudflare === 'function') {
+    plugins.push(mod.cloudflare())
+  }
+} catch (err) {
+  // Cloudflare plugin not available in this environment; continue without it
+}
 
 export default defineConfig({
-  plugins: [cloudflare()]
+  plugins
 })
