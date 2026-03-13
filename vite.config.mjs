@@ -12,9 +12,6 @@ try {
 }
 
 export default defineConfig({
-  plugins,
-  build: {
-    outDir: 'dist',
-    emptyOutDir: true // Force clean build each time
-  }
+  plugins: [react()],
+  base: 'https://sunhakportfolio.me/' 
 })
