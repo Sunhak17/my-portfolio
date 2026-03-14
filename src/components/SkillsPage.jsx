@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/Skills.css";
 
-// Import all tech logos as needed
 import c from "../assets/skills/c.png";
 import cpp from "../assets/skills/cpp.png";
 import java from "../assets/skills/java.svg";
@@ -32,9 +31,9 @@ const skillsData = [
     skills: [
       { name: "C Program", level: "Intermediate", icon: c },
       { name: "C++", level: "Intermediate", icon: cpp },
-      { name: "Java", level: "Advanced", icon: java },
+      { name: "Java", level: "Intermediate", icon: java },
       { name: "Dart", level: "Advanced", icon: dart },
-      { name: "JavaScript", level: "Advanced", icon: js },
+      { name: "JavaScript", level: "Intermediate", icon: js },
       { name: "Python", level: "Intermediate", icon: python },
       { name: "HTML", level: "Advanced", icon: html },
       { name: "CSS", level: "Advanced", icon: css }
