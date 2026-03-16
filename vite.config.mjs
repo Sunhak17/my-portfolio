@@ -13,6 +13,7 @@ try {
 
 export default defineConfig({
   plugins,
+  publicDir: 'public',
   build: {
     outDir: 'dist',
     emptyOutDir: true

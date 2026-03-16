@@ -6,7 +6,7 @@ export default function ProjectsPage() {
     {
       id: 1,
       title: "Vocabulite",
-      problem: "Built a full-stack mobile shopping application with real-time inventory management and secure payment integration.",
+      problem: "Built a mobile application using flutter to help users learn new vocabulary words through interactive flashcards, quizzes, and spaced repetition techniques.",
       tech: ["Flutter", "Dart"],
       github: "https://github.com/Sunhak17/vocabulite.git",
       live: null,
@@ -15,7 +15,7 @@ export default function ProjectsPage() {
     {
       id: 2,
       title: "Restaurant Order System",
-      problem: "Created a productivity app for managing tasks with drag-and-drop functionality, deadlines, and team collaboration features.",
+      problem: "Create a frontend application for a restaurant order system that allows customers to browse the menu, add to carts and place orders.",
       tech: ["React", "JavaScript"],
       github: "https://github.com/yourusername/task-manager",
       live: "https://restaurantordersystem.netlify.app/",
@@ -24,9 +24,18 @@ export default function ProjectsPage() {
     {
       id: 3,
       title: "Play2Day",
-      problem: "Built a tool that automatically generates portfolio websites from user data with customizable themes and templates.",
+      problem: "Developed 2D Game using Unity, where user can explore Cambodia Premier League football teams, players, and match highlights in an interactive and engaging way.",
       tech: ["C#", "Unity", "Game Engine"],
       github: "https://github.com/Sunhak17/play2day.git",
+      live: null,
+      image: null
+    },
+    {
+      id: 4,
+      title: "Watch2Day",
+      problem: "Built a movie streaming platform with a modern UI and seamless user experience.",
+      tech: ["C#", "Unity", "Game Engine"],
+      github: "https://github.com/leangchheng27/Watch2Day---Movie-Streaming-Platform.git",
       live: null,
       image: null
     },

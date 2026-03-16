@@ -56,7 +56,7 @@ export default function ContactPage() {
           <p>
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
-          <a href="sunhak963@gmail.com">
+          <a href="mailto:sunhak963@gmail.com">
             <button className="btn-primary">Send Me an Email</button>
           </a>
         </div>

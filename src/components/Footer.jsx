@@ -26,7 +26,7 @@ export default function Footer() {
           <a href="https://www.linkedin.com/in/oeng-sunhak-3ab8b63a2/" target="_blank" rel="noopener noreferrer">
             <img src={linkedin} alt="LinkedIn" />
           </a>
-          <a href="sunhak963@gmail.com">
+          <a href="mailto:sunhak963@gmail.com">
             <img src={email} alt="Email" />
           </a>
         </div>

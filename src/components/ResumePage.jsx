@@ -1,8 +1,11 @@
 import React from 'react'
 import '../styles/Resume.css'
-import CV from '../assets/CV.png'
 
 export default function ResumePage() {
+  const handleDownload = () => {
+    window.location.href = 'https://drive.google.com/uc?export=download&id=1PCsExBfaJrNEXQq5IBJSctpxIdrxRdcN'
+  }
+
   return (
     <div className="resume-page">
       <h1 className="section-title">Resume</h1>
@@ -15,7 +18,9 @@ export default function ResumePage() {
 
         <div className="resume-viewer">
           <div className="pdf-container">
-            <img src={CV} alt="Resume" style={{width: '70%', height: 'auto', objectFit: 'contain'}} />
+            <button onClick={handleDownload} className="download-btn">
+              Download CV
+            </button>
           </div>
         </div>
       </div>
