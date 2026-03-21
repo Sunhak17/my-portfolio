@@ -1,9 +1,12 @@
 import React from 'react'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import '../styles/About.css'
 
 export default function AboutPage() {
+  const { ref, isVisible } = useScrollAnimation()
+
   return (
-    <div className="about-page">
+    <div className={`about-page scroll-animate ${isVisible ? 'visible' : ''}`} ref={ref}>
       <h1 className="section-title">About Me</h1>
       
       <div className="about-content">
@@ -23,9 +26,17 @@ export default function AboutPage() {
 
         <div className="education-info">
           <h3>Education</h3>
-          <p><strong>Bachelor of Software Engineering</strong></p>
-          <p>Cambodia Academy of Digital Technology</p>
-          <p>Year: 3rd Year (Expected Graduation: 2027)</p>
+          <p><strong>Cambodia Academy of Digital Technology</strong></p>
+          <p>Bachelor of Computer Science </p>
+          <p>Specialization Software Engineering</p>
+          <p>Year: 3rd Year (2024 - Present)</p>
+        </div>
+
+        <div className="education-info">
+          <h3>Education</h3>
+          <p><strong>Australian Centre for Education</strong></p>
+          <p>General English Program</p>
+          <p>Graduated (2022 - 2025)</p>
         </div>
 
         <div className="interests">

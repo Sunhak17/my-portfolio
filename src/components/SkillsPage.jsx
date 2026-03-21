@@ -1,4 +1,5 @@
 import React from "react";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import "../styles/Skills.css";
 
 import c from "../assets/skills/c.png";
@@ -91,8 +92,10 @@ const SkillCategory = ({ category, skills }) => (
 );
 
 export default function SkillsPage() {
+  const { ref, isVisible } = useScrollAnimation()
+
   return (
-    <div className="skills-page">
+    <div className={`skills-page scroll-animate ${isVisible ? 'visible' : ''}`} ref={ref}>
       <h1 className="section-title">Technical Skills</h1>
       <div className="skills-container">
         {skillsData.map((category) => (

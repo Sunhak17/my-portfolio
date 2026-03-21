@@ -1,5 +1,4 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import HomePage from './components/HomePage'
@@ -8,24 +7,36 @@ import ProjectsPage from './components/ProjectsPage'
 import SkillsPage from './components/SkillsPage'
 import ResumePage from './components/ResumePage'
 import ContactPage from './components/ContactPage'
+import { useMouseBubbles } from './hooks/useMouseBubbles'
 
 export default function App() {
+  const bubblesRef = useMouseBubbles()
+
   return (
-    <Router>
-      <div className="app">
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/skills" element={<SkillsPage />} />
-            <Route path="/resume" element={<ResumePage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <div className="app">
+      <div className="mouse-bubbles-container" ref={bubblesRef}></div>
+      <Navbar />
+      <main className="main-content">
+        <section id="home">
+          <HomePage />
+        </section>
+        <section id="about">
+          <AboutPage />
+        </section>
+        <section id="projects">
+          <ProjectsPage />
+        </section>
+        <section id="skills">
+          <SkillsPage />
+        </section>
+        <section id="resume">
+          <ResumePage />
+        </section>
+        <section id="contact">
+          <ContactPage />
+        </section>
+      </main>
+      <Footer />
+    </div>
   )
 }

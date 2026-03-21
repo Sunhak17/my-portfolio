@@ -4,6 +4,7 @@ import '../styles/Footer.css'
 import github from '../assets/github.png'
 import linkedin from '../assets/linkedIn.jpg'
 import email from '../assets/gmail.png'
+import telegram from '../assets/telegram.png'
 
 export default function Footer() {
   return (
@@ -26,9 +27,12 @@ export default function Footer() {
           <a href="https://www.linkedin.com/in/oeng-sunhak-3ab8b63a2/" target="_blank" rel="noopener noreferrer">
             <img src={linkedin} alt="LinkedIn" />
           </a>
-          <a href="mailto:sunhak963@gmail.com">
-            <img src={email} alt="Email" />
-          </a>
+            <a href="mailto:sunhak963@gmail.com">
+              <img src={email} alt="Email" />
+            </a>
+            <a href="https://t.me/sunhak17" target="_blank" rel="noopener noreferrer">
+              <img src={telegram} alt="Telegram" />
+            </a>
         </div>
       </div>
     </footer>

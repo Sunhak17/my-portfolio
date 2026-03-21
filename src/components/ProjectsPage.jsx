@@ -1,7 +1,13 @@
 import React from 'react'
-import '../styles/Projects.css'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import '../styles/Projects.css';
+import frontend from '../assets/project/frontend.png';
+import vocabulite from '../assets/project/Vocabulite.png';
+import watch2day from '../assets/project/movie.png';
+import play2day from '../assets/project/play2day.png';
 
 export default function ProjectsPage() {
+  const { ref, isVisible } = useScrollAnimation()
   const projects = [
     {
       id: 1,
@@ -10,7 +16,7 @@ export default function ProjectsPage() {
       tech: ["Flutter", "Dart"],
       github: "https://github.com/Sunhak17/vocabulite.git",
       live: null,
-      image: null
+      image: vocabulite
     },
     {
       id: 2,
@@ -19,7 +25,7 @@ export default function ProjectsPage() {
       tech: ["React", "JavaScript"],
       github: "https://github.com/yourusername/task-manager",
       live: "https://restaurantordersystem.netlify.app/",
-      image: null
+      image: frontend
     },
     {
       id: 3,
@@ -28,21 +34,21 @@ export default function ProjectsPage() {
       tech: ["C#", "Unity", "Game Engine"],
       github: "https://github.com/Sunhak17/play2day.git",
       live: null,
-      image: null
+      image: play2day
     },
     {
       id: 4,
       title: "Watch2Day",
       problem: "Built a movie streaming platform with a modern UI and seamless user experience.",
-      tech: ["C#", "Unity", "Game Engine"],
+      tech: ["React", "Vite","Node.js", "MySQL WorkBench", "Cloudinary"],
       github: "https://github.com/leangchheng27/Watch2Day---Movie-Streaming-Platform.git",
       live: null,
-      image: null
+      image: watch2day
     },
   ]
 
   return (
-    <div className="projects-page">
+    <div className={`projects-page scroll-animate ${isVisible ? 'visible' : ''}`} ref={ref}>
       <h1 className="section-title">My Projects</h1>
       <p style={{color: 'var(--text-secondary)', fontSize: '18px', marginBottom: '20px'}}>
         Here are some of the projects I've worked on. Each project demonstrates different skills and technologies.

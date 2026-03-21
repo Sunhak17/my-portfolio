@@ -1,13 +1,15 @@
 import React from 'react'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import '../styles/Resume.css'
 
 export default function ResumePage() {
+  const { ref, isVisible } = useScrollAnimation()
   const handleDownload = () => {
     window.location.href = 'https://drive.google.com/uc?export=download&id=1PCsExBfaJrNEXQq5IBJSctpxIdrxRdcN'
   }
 
   return (
-    <div className="resume-page">
+    <div className={`resume-page scroll-animate ${isVisible ? 'visible' : ''}`} ref={ref}>
       <h1 className="section-title">Resume</h1>
       
       <div className="resume-container">

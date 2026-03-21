@@ -1,16 +1,26 @@
 import React from 'react'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import '../styles/Contact.css'
 import github from '../assets/github.png'
 import linkedin from '../assets/linkedIn.jpg'
 import email from '../assets/gmail.png'
+import telegram from '../assets/telegram.png'
 
 export default function ContactPage() {
+  const { ref, isVisible } = useScrollAnimation()
+
   return (
-    <div className="contact-page">
+    <div className={`contact-page scroll-animate ${isVisible ? 'visible' : ''}`} ref={ref}>
       <div className="contact-container">
         <div className="contact-intro">
           <h1 className="section-title">Get In Touch</h1>
-          <p>Feel free to reach out for collaborations, opportunities, or just a friendly chat!</p>
+        </div>
+
+        <div className="contact-cta">
+          <h3>Let's Build Something Amazing Together</h3>
+          <p>
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+          </p>
         </div>
 
         <div className="contact-methods">
@@ -20,11 +30,23 @@ export default function ContactPage() {
             </div>
             <h3>Email</h3>
             <p>
-              <a href="sunhak963@gmail.com">
+              <a href="mailto:sunhak963@gmail.com">
                 sunhak963@gmail.com
               </a>
             </p>
           </div>
+
+          <div className="contact-card" onClick={() => window.open('https://t.me/sunhak17', '_blank')}>
+            <div className="contact-icon">
+              <img src={telegram} alt="Telegram" />
+            </div>
+            <h3>Telegram</h3>
+            <p>
+              <a href="https://t.me/sunhak17" target="_blank" rel="noopener noreferrer">
+                @sunhak17
+              </a>
+            </p>
+        </div>
 
           <div className="contact-card" onClick={() => window.open('https://github.com/Sunhak17', '_blank')}>
             <div className="contact-icon">
@@ -49,16 +71,6 @@ export default function ContactPage() {
               </a>
             </p>
           </div>
-        </div>
-
-        <div className="contact-cta">
-          <h3>Let's Build Something Amazing Together</h3>
-          <p>
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-          </p>
-          <a href="mailto:sunhak963@gmail.com">
-            <button className="btn-primary">Send Me an Email</button>
-          </a>
         </div>
       </div>
     </div>
