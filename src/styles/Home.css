@@ -113,7 +113,7 @@
   grid-area:cta;
   display:flex;
   gap:16px;
-  margin-top: -70px;
+  margin-top: -90px;
 }
 
 .hero-cta button{
@@ -123,7 +123,7 @@
 .hero-contact{
   display:flex;
   gap:16px;
-  margin-top:-50px;
+  margin-top:-70px;
   justify-content:flex-start;
 }
 
@@ -151,7 +151,7 @@
   grid-area:right;
   width:100%;
   max-width:400px;
-  height:520px;
+  aspect-ratio:3/4;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -176,6 +176,7 @@
   width:100%;
   height:100%;
   object-fit:cover;
+  object-position:center;
 }
 
 @media(max-width:768px){
@@ -199,8 +200,8 @@
   }
   .hero-right{
     width:100%;
-    max-width:420px;
-    height:430px;
+    max-width:100%;
+    aspect-ratio:3/4;
     margin:20px auto 0;
   }
   .hero-cta{
@@ -233,7 +234,7 @@
   .hero-right{
     width:100%;
     max-width:420px;
-    height:500px;
+    aspect-ratio:3/4;
     margin:20px auto 0;
   }
   .hero-cta{
